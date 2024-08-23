@@ -1,0 +1,91 @@
+/* src/app/header/header.component.css */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #9cc7f1;
+  margin: 0 !important;
+}
+.label{
+  display: block;
+   float: right;
+   padding-top: 20px;
+   padding-left: 15px;
+
+}
+.logo img {
+  padding-top: 5px;
+  height: 50px;
+}
+
+/* .search-bar input{
+  border-radius: 4px;
+}
+.search-bar button {
+  background: #ddd;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px;
+  cursor: pointer;
+}
+.search-bar button:hover {
+  background: #ccc;} */
+
+.sign-in-button button {
+  border: none;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.sign-in-button button:hover {
+  background-color: #0056b3;
+}
+.sign-up-button button {
+
+  margin: 10px;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.sign-up-button button:hover {
+  background-color: #0056b3;
+}
+.search-bar {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container svg {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px 10px 10px 30px; /* Adjust padding to make room for the icon */
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.cart button{
+  background-color: #007bff;
+  color: white;
+}
