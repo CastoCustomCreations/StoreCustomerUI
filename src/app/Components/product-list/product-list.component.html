@@ -2,7 +2,8 @@
 <div class="product-list">
   <div class="product-card" *ngFor="let product of products">
     <h3>{{ product.name }}</h3>
-    <p>{{ product.units }}</p>
-    <p>Price: {{ product.price }}</p>
+    <img src= "{{product.imageOne}}" alt="{{ product.name }}" />
+    <p>{{ product.unitsInStock }}</p>
+    <p>Price: {{ product.price | currency  }}</p>
   </div>
 </div>
