@@ -1,9 +1,26 @@
-<p>product-list works!</p>
+
+
+
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>Drawer content<mat-divider [vertical]="true"></mat-divider></mat-drawer>
+  <mat-divider [vertical]="true"></mat-divider>
+  <mat-drawer-content>
+
+
 <div class="product-list">
-  <div class="product-card" *ngFor="let product of products">
+  <div class="product-card" *ngFor="let product of products" (click)="goToProductDetails(product.id)" style="cursor: pointer;">
     <h3>{{ product.name }}</h3>
-    <img src= "{{product.imageOne}}" alt="{{ product.name }}" />
-    <p>{{ product.unitsInStock }}</p>
-    <p>Price: {{ product.price | currency  }}</p>
+    <img src="{{ product.imageOne }}" alt="{{ product.name }}" />
+    <div class="review-stars">
+      <span *ngFor="let star of [1, 2, 3, 4, 5]">
+        <i class="fa" [ngClass]="star <= 5 ? 'fa-star' : 'fa-star-o'"></i>
+      </span>
+    </div>
+    <p>{{ product.unitsInStock }} in stock</p>
+    <p>Price: {{ product.price | currency }}</p>
+    <button>Add to Cart</button>
   </div>
 </div>
+</mat-drawer-content>
+</mat-drawer-container>
