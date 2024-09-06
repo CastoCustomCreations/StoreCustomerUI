@@ -1,3 +1,9 @@
-<div class = "global-banner">
-  <p>global-banner works!</p>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <img src="{{ getSlide() }}" alt="slide" />
+  </div>
+
+  <button (click)="getPrev()">Prev</button>
+
+  <button (click)="getNext()">Next</button>
 </div>

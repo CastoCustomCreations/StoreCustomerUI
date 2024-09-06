@@ -1,5 +1,31 @@
-.global-banner{
-  background: #8bf7a6;
-  text-align: center;
-  margin: 0 !important;
+.carousel.slide {
+  display: flex;
+  justify-content: center; /* Centers the carousel in the middle horizontally */
+  align-items: center;     /* Centers the carousel vertically */
+  position: relative;      /* Enables absolute positioning for the buttons */
+}
+
+.carousel-inner img {
+  width: 100%; /* Ensures the image fits within the carousel */
+  max-width: 800px; /* Set a max width for the carousel */
+  height: auto; /* Maintains aspect ratio */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Optional styling for buttons */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:nth-of-type(1) { /* Left button */
+  left: 20px;
+}
+
+button:nth-of-type(2) { /* Right button */
+  right: 20px;
 }
