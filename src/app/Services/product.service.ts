@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Product } from '../Models/product.model';
+import { Category } from '../Models/category.model';  // Assuming you have a Category model
 
 @Injectable({
   providedIn: 'root'
@@ -29,4 +30,8 @@ export class ProductService {
       this.productsUpdated.next(products);
     });
   }
+  getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>('http://localhost:5050/api/categories/');
+  }
+
 }
