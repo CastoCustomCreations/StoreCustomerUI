@@ -1,0 +1,31 @@
+
+<form [formGroup]="ContactForm"(ngSubmit)="onFormSubmit()">
+  <h1 >
+    Schedule a chat
+  </h1>
+<div class="mt -2">
+<label for ="Name" >Name</label>
+<input type="text"  formControlName="Name">
+</div>
+<div class="mt -2">
+  <label for ="Email" >email</label>
+  <input type="email"  formControlName="Email">
+  </div>
+  <div class="mt -2">
+    <label for ="Phone" class="font-bold">phone</label>
+    <input type="text"  formControlName="Phone">
+    </div>
+    <div class="mt -2">
+      <label for ="Message" >
+      <input type="text" formControlName="Message"  >
+      <span>Message</span>
+    </label>
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="date"></mat-calendar>
+    </mat-card>
+    <p>Selected date: {{date()}}</p>
+
+
+
+
+
