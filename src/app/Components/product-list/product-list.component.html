@@ -12,14 +12,11 @@
         </mat-option>
       </mat-select>
 
-
-    <!-- Slider for Price Range -->
-
-      <mat-label>Price Range</mat-label>
-      <mat-slider [(ngModel)]="priceRange" [min]="minPrice" [max]="maxPrice" (input)="onPriceChange($event)" thumbLabel tickInterval="10"></mat-slider>
-      <span>Min: {{ priceRange[0] | currency }}</span> -
-      <span>Max: {{ priceRange[1] | currency }}</span>
-
+      <mat-slider
+  [min]="minPrice"
+  [max]="maxPrice"
+  (input)="onSliderChange($event)">
+</mat-slider>
 
   </mat-drawer>
 
