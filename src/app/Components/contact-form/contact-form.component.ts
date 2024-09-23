@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { ContactForm } from '../../Models/contactform.model';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
@@ -14,7 +13,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
   selector: 'app-contact-form',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [RouterOutlet,AsyncPipe,FormsModule,ReactiveFormsModule,MatCardModule, MatDatepickerModule],
+  imports: [AsyncPipe,FormsModule,ReactiveFormsModule,MatCardModule, MatDatepickerModule,],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.css'

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { CustomerSignUpComponent } from "./Components/customer-sign-up/customer-sign-up.component";
 import { HeaderComponent } from "./Components/header/header.component";
 import { GlobalBannerComponent } from "./Components/global-banner/global-banner.component";
@@ -10,7 +9,7 @@ import { ContactFormComponent } from "./Components/contact-form/contact-form.com
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CustomerSignUpComponent, HeaderComponent, GlobalBannerComponent, ProductListComponent, ContactFormComponent],
+  imports: [CustomerSignUpComponent, HeaderComponent, GlobalBannerComponent, ProductListComponent, ContactFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
