@@ -8,19 +8,21 @@ import {ChangeDetectionStrategy, model} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
+import { CommonModule } from '@angular/common'; // Import CommonModule
 @Component({
   selector: 'app-contact-form',
   standalone: true,
   providers: [provideNativeDateAdapter()],
-  imports: [AsyncPipe,FormsModule,ReactiveFormsModule,MatCardModule, MatDatepickerModule,],
+  imports: [AsyncPipe,FormsModule,ReactiveFormsModule,MatCardModule, MatDatepickerModule,CommonModule,],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.css'
 })
 export class ContactFormComponent {
+  selected = model<Date | null>(null);
+
   http = inject(HttpClient);
-  date = model<Date | null>(null);
+  date: Date | null = null;
 
   ContactForm = new FormGroup({
     Name: new FormControl<string>(''),

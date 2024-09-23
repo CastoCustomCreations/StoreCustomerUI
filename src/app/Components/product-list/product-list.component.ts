@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';  // <-- Add this
 import { Category } from '../../Models/category.model';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatRadioModule} from '@angular/material/radio';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -25,6 +26,7 @@ import { MatSliderModule } from '@angular/material/slider';
     MatInputModule,
     MatFormFieldModule,
     MatSliderModule,
+    MatRadioModule
   ],
 
 })

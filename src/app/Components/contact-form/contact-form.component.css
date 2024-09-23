@@ -1,3 +1,51 @@
 .demo-inline-calendar-card {
   width: 300px;
 }
+.contactformcontainer {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full height of the viewport */
+  flex-direction: column; /* Align items vertically */
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Stack the form elements */
+  width: 500px; /* Adjust width as needed */
+  padding: 20px; /* Add some padding */
+  border: 1px solid #ccc; /* Optional: border around the form */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+  margin: 0 auto; /* Center the form horizontally */
+}
+h1 {
+  text-align: center; /* Center the heading */
+}
+
+.mt-2 {
+  display: flex;
+  flex-direction: column; /* Stack label and input vertically */
+  align-items: center; /* Center content horizontally */
+  margin-top: 10px; /* Adjust margin as needed */
+
+}
+label {
+  text-align: center; /* Center the text of the label */
+  width: 100%; /* Make label take full width */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+  width: 100%; /* Make inputs take full width of the form */
+  max-width: 250px; /* Limit maximum width */
+  padding: 8px; /* Padding inside input fields */
+  margin: 0 auto; /* Center the input horizontally */
+  display: block; /* Make sure input is a block element */
+}
+
+button {
+  margin: 20px auto 0 auto; /* Center the button horizontally */
+  padding: 10px 20px;
+}

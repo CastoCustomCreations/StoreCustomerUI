@@ -3,6 +3,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
+  height: 2000px;
 }
 
 .product-card {
@@ -11,6 +12,7 @@
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  height: 600px;
 }
 img {
   width: 300px;
